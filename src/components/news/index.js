@@ -5,9 +5,8 @@ import { scale, verticalScale } from '../../utils/dimensions'
 
 const styles = StyleSheet.create({
   container: {
-    height: verticalScale(164),
+    height: verticalScale(165),
     width: '100%',
-    borderRadius: scale(20),
     color: COLORS.WHITE,
     justifyContent: 'flex-end',
     marginTop: verticalScale(10),
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
 const News = ({ image, date, name, text }) => {
 
   return (
-    <ImageBackground style={styles.container} source={image}>
+    <ImageBackground imageStyle={{ borderRadius: scale(20) }} style={styles.container} source={image}>
       <Text style={[styles.text, styles.mgH20]}>{date} - {name}</Text>
       <View style={[styles.descriptionContainer, styles.mgH20]}>
         <Text numberOfLines={2} style={styles.text}>{text}</Text>
